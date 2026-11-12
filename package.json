@@ -1,0 +1,35 @@
+{
+  "name": "@civ-clone/base-city-happiness-status",
+  "version": "0.1.0",
+  "description": "Keeps a city's status, such as disorder or celebrating, from one turn to the next and in the save.",
+  "repository": "git@github.com:civ-clone/base-city-happiness-status.git",
+  "keywords": [
+    "typescript",
+    "civilization"
+  ],
+  "author": "dom111 <dom111@users.noreply.github.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "npm run ts:compile && npm run prettier:format",
+    "prettier:check": "prettier --config .prettierrc --check '**/*.ts'",
+    "prettier:format": "prettier --config .prettierrc '**/*.ts' --write",
+    "test": "ts-mocha ./tests/*.test.ts",
+    "ts:compile": "tsc --build tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.0.0",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "^16.0.0",
+    "chai": "^4.0.0",
+    "mocha": "^10.0.0",
+    "prettier": "^2.8.8",
+    "ts-mocha": "^10.0.0",
+    "typescript": "^4.0.0"
+  },
+  "dependencies": {
+    "@civ-clone/core-city": "^0.1.24",
+    "@civ-clone/core-engine": "^0.1.6",
+    "@civ-clone/core-pending-effect": "^0.1.2"
+  }
+}
