@@ -11,6 +11,11 @@ is a `core-pending-effect` `PendingEffect` on the city, named by the ruleset's o
   - `registerCityStatusHandler(handler, event, pendingEffects?, engine?)`: emits `event` with the city when its status
     ends. Register it when the rules are created, so a status loaded from a save can still end.
   - `forgetCityStatuses(city, handlers, pendingEffects?)`: drops statuses without ending them, for a city that's gone.
+- `lib/statusTurn`: `cityStatusTurn(cities, options)` checks each city's `CivilDisorder` and `CelebrateLeader` rules
+  on one set of yields, emits `city:civil-disorder` and `city:leader-celebration`, and records or ends both statuses.
+  The ruleset passes its handlers and its own turns of the rule through hooks: `onDisorderContinues` (a second turn of
+  disorder, such as a Democracy falling), `onCelebrationChecked` (with whether the city celebrates again, for growth),
+  `forgetCelebration` (drop rather than end) and `celebrationSurvivesDisorder`.
 
 A library: it registers no rules. See `civ1-city-happiness` for Civilization's civil disorder and "We Love the King
 Day".
