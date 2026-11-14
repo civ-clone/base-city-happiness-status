@@ -29,7 +29,10 @@
   },
   "dependencies": {
     "@civ-clone/core-city": "^0.1.24",
+    "@civ-clone/core-city-happiness": "^0.1.2",
     "@civ-clone/core-engine": "^0.1.6",
-    "@civ-clone/core-pending-effect": "^0.1.2"
+    "@civ-clone/core-pending-effect": "^0.1.2",
+    "@civ-clone/core-rule": "^0.1.9",
+    "@civ-clone/core-yield": "^0.1.6"
   }
 }
